@@ -1,2 +1,3 @@
-# grampsweb-raspberrypi
-A Raspbbery Pi image for Gramps Web
+# Gramps Web custom Raspberry Pi OS image
+
+A Custom Raspberry Pi OS image for Gramps Web.
