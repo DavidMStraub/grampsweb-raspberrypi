@@ -2,12 +2,17 @@
 
 A Custom Raspberry Pi OS image for [Gramps Web](https://gramps-project.github.io/web/).
 
+Features:
+
+- Automated Let's Encrypt SSL certificate generation
+- Celery background task queue with Redis backend
+
 
 ## Usage
 
 1. Install the [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 2. Download and unzip the image from the [latest release](https://github.com/DavidMStraub/grampsweb-raspberrypi/releases/tag/v0.0.5)
-3. Flash the image to an SD card
+3. Flash the image to an SD card by selecting "Own Image" in the Imager
 4. Connect your Raspberry PI to an Ethernet cable, insert the SD card and connect it to USB power
 5. Connect via SSH to `pi@raspberrypi` using the initial password `raspberry`
 6. At the login prompt, you will be asked the following questions:
