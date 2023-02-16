@@ -35,7 +35,7 @@ jobs:
       - name: Fetch additional packages
         run: |-
           sudo apt-get update
-          sudo apt-get install tree fdisk gdisk qemu-user-static libarchive-tools psmisc tar autoconf make qemu-utils
+          sudo apt-get install tree fdisk gdisk qemu-user-static libarchive-tools psmisc tar autoconf make qemu-utils zip
       - name: Get packer-build-arm plugin
         run: |-
           git clone https://github.com/mkaczanowski/packer-builder-arm plugin
@@ -46,7 +46,8 @@ jobs:
         run: |-
           cp plugin/packer-builder-arm .
           sudo packer build grampsweb-raspios.json | tee build.log || true
-          grep "::BUILD::SUCCESS" build.log
+          cat build.log
+          cat build.log
           zip grampsweb-2022-09-22-raspios-bullseye-arm64-lite.img.zip grampsweb-2022-09-22-raspios-bullseye-arm64-lite.img
       - name: Upload release asset
         env:
